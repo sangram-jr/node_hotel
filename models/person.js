@@ -31,6 +31,8 @@ const personSchema=new mongoose.Schema({
     }
 })
 
+//example of commit changes
+
 //create person model
 const person=mongoose.model('person',personSchema);
 //export the person model
