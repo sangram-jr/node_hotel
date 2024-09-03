@@ -11,12 +11,8 @@ app.use(bodyParser.json());  //req.body
 
 //Get method
 app.get('/',function(req,res){
-    res.send("welcome to my hotel... How can i help you?");
+    res.send("welcome to my hotel...");
 })
-
-
-
-
 
 
 //import the router files
@@ -27,9 +23,11 @@ app.use('/person',personRoutes);
 app.use('/menu',menuItemRoutes);
 
 
+//define port
+require('dotenv').config();
+const PORT=process.env.PORT || 3000;
 
-
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
     console.log("listening on port 3000");
     
 })
